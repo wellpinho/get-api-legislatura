@@ -5,13 +5,7 @@ import './main.css'
 
 export default class Main extends Component {
   state = {
-    users: [],
-    dados: ''
-  }
-
-  handlerChange = (e) => {
-    e.preventDefault()
-    this.setState({ dados: e.target.value})
+    users: []
   }
 
   componentDidMount() {
@@ -21,6 +15,7 @@ export default class Main extends Component {
   loadParlamentos = async () => {
     const response = await api.get(`/users`)
     this.setState({ users: response.data })
+    console.log(response.data)
   }
 
   render() {
@@ -32,7 +27,7 @@ export default class Main extends Component {
           {
             this.state.users.map(list => {
               return (
-                <option value="" key={list.id}>{list.name}</option>
+                <option key={list.id}>{list.name}</option>
               )
             })
           }
