@@ -1,0 +1,9 @@
+header {
+  background-color: tomato;
+  height: 100px;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
