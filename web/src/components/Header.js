@@ -4,6 +4,7 @@ export default function Header() {
     <div>
       <header>
         <h2>API Dados aberto</h2>
+        <small>Wellington Pinho</small>
       </header>
     </div>
   )
